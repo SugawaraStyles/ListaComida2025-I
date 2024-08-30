@@ -43,7 +43,7 @@ fun MenuCard(platillo: Platillo,modifier: Modifier = Modifier){
             getString(platillo.StringResourceId),
             modifier = Modifier.padding(22.dp),
             style = MaterialTheme.
-            typography.headlineMedium
+            typography.displayMedium
 
         )
     }
