@@ -1,9 +1,11 @@
 package com.example.listacomida2025_i.model
 
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
+import androidx.compose.ui.graphics.Color
 
 data class Platillo(
-    @StringRes val StringResourceId: Int,
-    @DrawableRes val drawableResourceId: Int,
+    val nombre: String,
+    val precio: Double,
+    val oferta: Boolean,
+    val imagen: Int,
+    val ofertaColor: Color = Color.Red // Color para resaltar la oferta
 )

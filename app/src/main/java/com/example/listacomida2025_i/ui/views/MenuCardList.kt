@@ -12,24 +12,30 @@ import com.example.listacomida2025_i.data.DataSource
 import com.example.listacomida2025_i.model.Platillo
 import com.example.listacomida2025_i.ui.theme.ListaComida2025ITheme
 
+// Definir la función de la cabecera
 @Composable
-fun MenuCardList(platilloList: List<Platillo>,
-                 modifier: Modifier= Modifier){
+fun MenuTopAppBar(modifier: Modifier=Modifier){
+
+}
+
+// Luego defines la función principal que usa la cabecera
+@Composable
+fun MenuCardList(platilloList: List<Platillo>, modifier: Modifier = Modifier) {
     Scaffold(
         topBar = {
             MenuTopAppBar()
         }
-    ) {
-        it->
-        LazyColumn(contentPadding = it  ,modifier = modifier) {
+    ) { paddingValues ->
+        LazyColumn(
+            contentPadding = paddingValues,
+            modifier = modifier
+        ) {
             items(platilloList) { platillo ->
                 MenuCard(
                     platillo = platillo,
                     modifier = Modifier.padding(10.dp)
                 )
-
             }
-
         }
     }
 }
