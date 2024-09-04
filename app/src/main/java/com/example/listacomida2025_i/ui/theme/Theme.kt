@@ -242,7 +242,6 @@ private val highContrastDarkColorScheme = darkColorScheme(
     surfaceContainerHigh = surfaceContainerHighDarkHighContrast,
     surfaceContainerHighest = surfaceContainerHighestDarkHighContrast,
 )
-
 @Immutable
 data class ColorFamily(
     val color: Color,
